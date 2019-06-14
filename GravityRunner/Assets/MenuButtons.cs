@@ -49,7 +49,7 @@ public class MenuButtons : MonoBehaviour
     {
         Debug.Log("scoobyshop");
         loader.LoadScene(1);
-        loader.SetScene(1);
+        //loader.SetScene(1);
         //LoadShop();
        // SetShop();
     }

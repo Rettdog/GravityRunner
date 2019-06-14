@@ -16,7 +16,7 @@ public class ShopButtons : MonoBehaviour
     {
         //loader = new SceneLoader();
         loader = (SceneLoader)SceneLoader.CreateInstance("SceneLoader");
-        Debug.Log("Start");
+        Debug.Log("ShopStart");
         homeButton.onClick.AddListener(HomeOnClick);
         //loader.SetScene("Start");
     }
@@ -27,7 +27,7 @@ public class ShopButtons : MonoBehaviour
         Debug.Log("scoobyhome");
         loader.LoadScene(0);
         //SceneManager.LoadScene("Menu",0);
-        loader.SetScene(0);
+        //loader.SetScene(0);
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Menu"));
         //LoadShop();
         // SetShop();
