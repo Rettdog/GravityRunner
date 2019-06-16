@@ -19,8 +19,12 @@ public class MenuButtons : MonoBehaviour
         //loader = new SceneLoader();
         loader=(SceneLoader) SceneLoader.CreateInstance("SceneLoader");
         loader.Start();
-        loader.SetScene(0);
-        loader.UnloadScene(1);
+        //loader.SetScene(0);
+        if (loaded == false)
+        {
+            loader.UnloadScene(1);
+            loaded = true;
+        }
         /*loader.LoadScene("Menu");
         while (!loader.sceneLoaded)
         {
@@ -36,9 +40,7 @@ public class MenuButtons : MonoBehaviour
             }
             loaded = true;
         }*/
-        {
-
-        }
+        
     }
 
     private void PlayOnClick()
@@ -47,7 +49,7 @@ public class MenuButtons : MonoBehaviour
     }
     private void ShopOnClick()
     {
-        Debug.Log("scoobyshop");
+        //Debug.Log("scoobyshop");
         loader.LoadScene(1);
         //loader.SetScene(1);
         //LoadShop();

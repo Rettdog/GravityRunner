@@ -35,17 +35,10 @@ public class SceneLoader : ScriptableObject
             //Debug.Log(SceneManager.GetSceneAt(scene).name);
             // Loads the second Scene
             SceneManager.LoadScene(scene);
-            Debug.Log("Scene Loaded");
+            //Debug.Log("Scene Loaded");
             //SceneManager.LoadSceneAsync(SceneManager.GetSceneByPath(scene).name,LoadSceneMode.Additive);
             //Debug.Log("Active Scene : " + SceneManager.GetActiveScene().name);
-            if (SceneManager.GetSceneByBuildIndex(scene).isLoaded)
-            {
-                Debug.Log("Scene at build index " + scene + " is successfully loaded");
-            }
-            else
-            {
-                Debug.Log("Failed to load scene at build index " + scene);
-            }
+           
         }
     }
 

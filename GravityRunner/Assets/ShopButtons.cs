@@ -9,6 +9,7 @@ public class ShopButtons : MonoBehaviour
 {
 
     public Button homeButton;
+    public Button testButton;
     //bool sceneLoaded;
     SceneLoader loader;
     // Start is called before the first frame update
@@ -18,19 +19,26 @@ public class ShopButtons : MonoBehaviour
         loader = (SceneLoader)SceneLoader.CreateInstance("SceneLoader");
         Debug.Log("ShopStart");
         homeButton.onClick.AddListener(HomeOnClick);
+        testButton.onClick.AddListener(makeANewMethodYESSSSSSSSS);
         //loader.SetScene("Start");
     }
 
     
-    private void HomeOnClick()
+    public void HomeOnClick()
     {
-        Debug.Log("scoobyhome");
+        //Debug.Log("scoobyhome");
         loader.LoadScene(0);
         //SceneManager.LoadScene("Menu",0);
         //loader.SetScene(0);
         //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Menu"));
         //LoadShop();
-        // SetShop();
+        
+        //SetShop();
+    }
+
+    public void makeANewMethodYESSSSSSSSS()
+    {
+        Debug.Log("pls work");
     }
 
     // Update is called once per frame
