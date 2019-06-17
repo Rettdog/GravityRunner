@@ -23,6 +23,7 @@ public class MenuButtons : MonoBehaviour
         if (loaded == false)
         {
             loader.UnloadScene(1);
+            loader.UnloadScene(2);
             loaded = true;
         }
         /*loader.LoadScene("Menu");
@@ -45,7 +46,7 @@ public class MenuButtons : MonoBehaviour
 
     private void PlayOnClick()
     {
-        Debug.Log("scoobyplay");
+        loader.LoadScene(2);
     }
     private void ShopOnClick()
     {
