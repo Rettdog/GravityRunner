@@ -6,6 +6,11 @@ public class GameScript : MonoBehaviour
 {
     public RectTransform[] things;
     public Rigidbody2D person;
+    public SpriteRenderer personRenderer;
+    public Sprite running1;
+    public Sprite running2;
+
+
     public int xSpeed = 1;
     // Start is called before the first frame update
     void Start()
@@ -21,10 +26,27 @@ public class GameScript : MonoBehaviour
         {
             thing.position += Vector3.left * 1.0f;
         }
+        things[2].Rotate(new Vector3(0, 0, -1));
 
         if (Input.GetMouseButtonDown(0))
         {
             person.gravityScale *= -1;
+            if (personRenderer.flipY)
+            {
+                personRenderer.flipY = false;
+            }
+            else
+            {
+                personRenderer.flipY = true;
+            }
+        }
+        //running animation
+        if (personRenderer.sprite == running1){
+            personRenderer.sprite = running2;
+        }
+        else
+        {
+            personRenderer.sprite = running1;
         }
 
     }
